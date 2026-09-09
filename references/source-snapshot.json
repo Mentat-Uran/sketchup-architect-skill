@@ -1,0 +1,107 @@
+{
+  "snapshot": "2026-09-06T14:26:28.716564+08:00",
+  "manifest_sha256": "9113b63a190f5cb53fe3295ed1d455d2d253ecb141fd52f903a64f256619f847",
+  "repositories": [
+    {
+      "repository": "ruby-api-docs",
+      "path": "github/ruby-api-docs",
+      "branch": "main",
+      "commit": "12dfe0ab3366f59d615db08e9ab8915285ce5a50",
+      "tag": "SU2026.1"
+    },
+    {
+      "repository": "ruby-api-stubs",
+      "path": "github/ruby-api-stubs",
+      "branch": "main",
+      "commit": "ec2e0bff9c3e45b07e02e9efcba4a9290093646c",
+      "tag": "v0.7.11"
+    },
+    {
+      "repository": "sketchup-ruby-api-tutorials",
+      "path": "github/sketchup-ruby-api-tutorials",
+      "branch": "main",
+      "commit": "f9827d173c6fcec179dfba259804090aaeaad429",
+      "tag": "none"
+    },
+    {
+      "repository": "sketchup-extension-vscode-project",
+      "path": "github/sketchup-extension-vscode-project",
+      "branch": "main",
+      "commit": "e13ba9dd01bdf4ab9392aa1c9850b73c54e381d2",
+      "tag": "none"
+    },
+    {
+      "repository": "rubocop-sketchup",
+      "path": "github/rubocop-sketchup",
+      "branch": "main",
+      "commit": "b4383a5586a43bf676b88c02eabde8e78134ecd6",
+      "tag": "v2.1.1"
+    },
+    {
+      "repository": "sketchup-shapes",
+      "path": "github/sketchup-shapes",
+      "branch": "main",
+      "commit": "65dcd10a845c692bca8acb39730e61bf6906aad8",
+      "tag": "Version_2.0.1"
+    },
+    {
+      "repository": "sketchup-stl",
+      "path": "github/sketchup-stl",
+      "branch": "main",
+      "commit": "0b83322e202adb6dfaeadde41168eb88ad8f6728",
+      "tag": "v2.2.0"
+    },
+    {
+      "repository": "htmldialog-examples",
+      "path": "github/htmldialog-examples",
+      "branch": "main",
+      "commit": "130205067a7e64e8c32b4bad5bb78d1f425cb036",
+      "tag": "none"
+    },
+    {
+      "repository": "interactive-sketchup-ruby-api-documentation",
+      "path": "github/interactive-sketchup-ruby-api-documentation",
+      "branch": "main",
+      "commit": "e7ed9b9933699d4981d60231283ab2552683c011",
+      "tag": "v1.0.0"
+    },
+    {
+      "repository": "testup-2",
+      "path": "github/testup-2",
+      "branch": "main",
+      "commit": "1314ae0643d08c7e6f707a64b1f56771f64b7028",
+      "tag": "2.5.4"
+    },
+    {
+      "repository": "api-issue-tracker",
+      "path": "github/api-issue-tracker",
+      "branch": "main",
+      "commit": "d03753e8a748ebeb6220f9fca594ea4753baaaec",
+      "tag": "none"
+    },
+    {
+      "repository": "ruby-api-docs-gh-pages",
+      "path": "github/ruby-api-docs-gh-pages",
+      "branch": "gh-pages",
+      "commit": "3f48e302fca95e27c693859a24ee53f801655df1",
+      "tag": "SU2026.1"
+    },
+    {
+      "repository": "sketchup-ruby-api-tutorials-wiki",
+      "path": "github/sketchup-ruby-api-tutorials-wiki",
+      "branch": "master",
+      "commit": "b0d534093a555db610a67d48df165888346196a9",
+      "tag": "none"
+    }
+  ],
+  "installed_app_observation": {
+    "path": "/Applications/SketchUp.app",
+    "version": "25.0.659",
+    "method": "Info.plist read only; no launch"
+  },
+  "caveats": [
+    "main ruby-api-docs includes 2016 generated HTML",
+    "2026.1 stubs notes include placeholder build numbers",
+    "No live SketchUp tests performed"
+  ]
+}

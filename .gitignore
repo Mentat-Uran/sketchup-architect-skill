@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.sqlite
+*.sqlite-*
+.venv/
+venv/
+output/
+sketchup-modeler-source/
+

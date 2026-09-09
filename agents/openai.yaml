@@ -1,0 +1,4 @@
+interface:
+  display_name: "SketchUp Architect"
+  short_description: "Research precedents and design editable SketchUp buildings"
+  default_prompt: "Use $sketchup-architect to research relevant real buildings, develop my architectural scheme, and create and refine an editable SketchUp model."

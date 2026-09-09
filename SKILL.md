@@ -5,6 +5,8 @@ description: Research real architectural precedents, design buildings from spars
 
 # SketchUp Architect
 
+For installation and the user-facing operating contract, read [USAGE.md](USAGE.md) when the task involves setup, evidence, live execution, or delivery.
+
 Turn the user's brief into a coherent architectural proposal and an editable SketchUp model. Explain how people use the building and how its spaces, circulation, structure, envelope, and site fit together. A decorated exterior box is not a complete building scheme. Match detail and deliverables to the requested stage; do not expand a massing study into construction documentation.
 
 ## Start with the task and evidence

@@ -52,6 +52,10 @@ SKILL_ROOT="${CODEX_HOME:-$HOME/.codex}/skills/sketchup-architect"
 if [ -e "$SKILL_ROOT" ]; then
   if [ -d "$SKILL_ROOT/.git" ]; then
     git -C "$SKILL_ROOT" status --short
+    if [ -n "$(git -C "$SKILL_ROOT" status --porcelain)" ]; then
+      echo "拒绝更新存在未提交修改的 checkout：$SKILL_ROOT" >&2
+      exit 1
+    fi
     git -C "$SKILL_ROOT" pull --ff-only
   else
     echo "拒绝覆盖已有的非 Git 目录：$SKILL_ROOT" >&2
@@ -94,4 +98,3 @@ ruby scripts/session_contract_test.rb
 ## 范围
 
 本 skill 面向建筑概念设计和可编辑模型工作流；不替代结构工程、无障碍审查、规划审批、消防审查或当地法律合规判断。
-

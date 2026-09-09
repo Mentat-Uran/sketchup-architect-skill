@@ -53,6 +53,10 @@ SKILL_ROOT="${CODEX_HOME:-$HOME/.codex}/skills/sketchup-architect"
 if [ -e "$SKILL_ROOT" ]; then
   if [ -d "$SKILL_ROOT/.git" ]; then
     git -C "$SKILL_ROOT" status --short
+    if [ -n "$(git -C "$SKILL_ROOT" status --porcelain)" ]; then
+      echo "Refusing to update a checkout with uncommitted changes: $SKILL_ROOT" >&2
+      exit 1
+    fi
     git -C "$SKILL_ROOT" pull --ff-only
   else
     echo "Refusing to overwrite existing non-Git directory: $SKILL_ROOT" >&2

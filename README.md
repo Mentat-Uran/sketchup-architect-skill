@@ -2,6 +2,8 @@
 
 An evidence-led Codex skill for architectural precedent research, design reasoning, and editable SketchUp Desktop modeling.
 
+[中文 README](README.zh-CN.md)
+
 Demo: [Tangjianli spatial walkthrough](https://tangjianli-space.fxc060816.chatgpt.site)
 
 ## What it does
@@ -12,7 +14,7 @@ Demo: [Tangjianli spatial walkthrough](https://tangjianli-space.fxc060816.chatgp
 - separates offline/static checks from native SketchUp geometry, visual QA, save/reopen, and export evidence;
 - provides small helpers for plan ledgers, source retrieval, model auditing, guarded revisions, and offline checks.
 
-## Install
+## Install manually
 
 Clone this folder into the Codex skills directory:
 
@@ -22,6 +24,50 @@ git clone https://github.com/Mentat-Uran/sketchup-architect-skill.git \
 ```
 
 Then invoke it with `$sketchup-architect` or let Codex discover it automatically.
+
+## Install with an AI agent
+
+Give your coding agent a request like this:
+
+```text
+Install the `sketchup-architect` Codex skill from
+https://github.com/Mentat-Uran/sketchup-architect-skill.
+
+Use the standard skill directory `${CODEX_HOME:-$HOME/.codex}/skills/sketchup-architect`.
+Before changing an existing directory, inspect whether it is a Git checkout and
+whether it has uncommitted changes; do not delete or overwrite user files.
+After installation, run the repository's offline checks:
+
+  python3 scripts/offline_checks.py
+  ruby scripts/session_contract_test.rb
+
+Report the exact installation path and the check results. Do not copy the
+official SketchUp source corpus into the skill. Configure SKETCHUP_SOURCE_ROOT
+only if exact local API lookup is needed.
+```
+
+An agent can perform the equivalent safe shell flow:
+
+```sh
+SKILL_ROOT="${CODEX_HOME:-$HOME/.codex}/skills/sketchup-architect"
+if [ -e "$SKILL_ROOT" ]; then
+  if [ -d "$SKILL_ROOT/.git" ]; then
+    git -C "$SKILL_ROOT" status --short
+    git -C "$SKILL_ROOT" pull --ff-only
+  else
+    echo "Refusing to overwrite existing non-Git directory: $SKILL_ROOT" >&2
+    exit 1
+  fi
+else
+  git clone https://github.com/Mentat-Uran/sketchup-architect-skill.git "$SKILL_ROOT"
+fi
+
+cd "$SKILL_ROOT"
+python3 scripts/offline_checks.py
+ruby scripts/session_contract_test.rb
+```
+
+Start a new agent session, or ask the agent to reload its available skills, after installation.
 
 ## Official SketchUp sources
 
@@ -49,4 +95,3 @@ For a live task, use the current SketchUp Desktop session, inspect the active mo
 ## Scope
 
 This skill supports architectural concept and editable-model workflows. It does not certify structural engineering, accessibility compliance, planning approval, fire safety, or local legal compliance.
-
